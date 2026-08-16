@@ -43,7 +43,7 @@ jobs:
           PROJECT=$(find extracted -name "build.gradle" -type f | head -1 | xargs dirname)
           echo "PROJECT=$PROJECT" >> $GITHUB_ENV
           echo "Android project: $PROJECT"
-                    echo "android.useAndroidX=true" >> "$PROJECT/gradle.properties"
+          echo "android.useAndroidX=true" >> "$PROJECT/gradle.properties"
           echo "android.enableJetifier=true" >> "$PROJECT/gradle.properties"
 
       - name: Build APK
